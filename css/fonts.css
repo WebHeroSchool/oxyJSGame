@@ -1,7 +1,7 @@
 @font-face {
-    font-family: 'roboto-bold';
-    src: url('../fonts/roboto-bold-webfont.woff'),
-         url('../fonts/roboto-bold-webfont.woff2');
+    font-family: 'RobotoBold';
+    src: url('../fonts/RobotoBold.woff'),
+         url('../fonts/RobotoBold.woff2');
     font-weight: 700;
     font-style: normal;
 }
