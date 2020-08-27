@@ -7,4 +7,14 @@ const selectLevel = (item) => {
 
 level.addEventListener('click',selectLevel );
 
-start.addEventListener ('click', )
+function createGameField(){
+
+
+}
+
+function startGame() {
+
+}
+
+start.addEventListener ('click', startGame);
+
