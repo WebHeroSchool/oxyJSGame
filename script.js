@@ -38,6 +38,8 @@ function createGameTable(){
     	card.classList.add('cardback');
     	gameTable.appendChild(card);
     	gameTable.innerHTML='images/Перевернутая карта.png' ;
+
+    	return card;
     }
 }
 
