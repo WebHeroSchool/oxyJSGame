@@ -42,7 +42,7 @@ function createGameTable(){
     	return card;
     }
 }
-
+debugger;
 function startGame() {
     getNumberOfCard();
 	createGameTable();
