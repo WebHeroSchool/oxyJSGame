@@ -94,3 +94,12 @@ button {
   background-size: cover;
   
 }
+
+.gametable{
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
