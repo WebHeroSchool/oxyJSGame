@@ -33,23 +33,24 @@ function getNumberOfCard () {
 
 function createGameTable(){
     const cards = getNumberOfCard ();
+    
+    	
+    
     for (let i=0; i<cards; i++) {
-    	let card = document.createElement("div");
-    	card.classList.add('cardback');
-    	gameTable.appendChild(card);
-    	gameTable.innerHTML = '.cardback';
-
-    	return card;
+    	    console.log(i);
+    	    let card = document.createElement("div");
+    	    card.classList.add('cardback');
+    	    gameTable.appendChild(card);
+    	    
+    	    console.log(card);	
     }
 }
-
+debugger;
 function startGame() {
     getNumberOfCard();
 	createGameTable();
-// скрываю первую страницу
     document.querySelector('.main').classList.add('hidden');
 }
 
 start.addEventListener ('click', startGame);
 
-debugger;

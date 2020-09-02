@@ -88,5 +88,9 @@ button {
 }
 
 .cardback{
-  background-image: url(images/cardback.png);
+  background-image: url(../images/cardback.png);
+  width: 130px;
+  height: 200px;
+  background-size: cover;
+  
 }
