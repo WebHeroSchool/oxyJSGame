@@ -2,14 +2,14 @@ const start = document.querySelector('.start');
 const level = document.querySelectorAll('.level');
 const gameTable = document.querySelector(".gametable");
 const selectLevel = (item) => {
-	item.target.classList.add("active");
+	item.target.classList.add(".active");
 
 };
 
 level.forEach((item) => item.addEventListener('click',selectLevel ));
 
 function showLevel() {
-	let activeLevel = document.querySelector('active');
+	let activeLevel = document.querySelector('.active');
 	let idActiveLevel = activeLevel.id;
 	return idActiveLevel;
 }
