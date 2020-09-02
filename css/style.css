@@ -66,9 +66,8 @@ button {
   transform: rotate(11.9deg);
   right: 23%;
   top: 52%;
-  color: red;
   
- }
+}
 
 .wrapcard__second {
   position: absolute;
@@ -79,6 +78,7 @@ button {
 }
 
 .activ {
+  color: red;
 
 }
 
@@ -87,3 +87,6 @@ button {
 
 }
 
+.cardback{
+  background-image: url(images/cardback.png);
+}

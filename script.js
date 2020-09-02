@@ -2,7 +2,7 @@ const start = document.querySelector('.start');
 const level = document.querySelectorAll('.level');
 const gameTable = document.querySelector(".gametable");
 const selectLevel = (item) => {
-	item.target.classList.add(".active");
+	item.target.classList.add("active");
 
 };
 
@@ -37,18 +37,19 @@ function createGameTable(){
     	let card = document.createElement("div");
     	card.classList.add('cardback');
     	gameTable.appendChild(card);
-    	gameTable.innerHTML='images/Перевернутая карта.png' ;
+    	gameTable.innerHTML = '.cardback';
 
     	return card;
     }
 }
-debugger;
+
 function startGame() {
     getNumberOfCard();
 	createGameTable();
 // скрываю первую страницу
-    document.querySelector('main').classList.add('hidden');
+    document.querySelector('.main').classList.add('hidden');
 }
 
 start.addEventListener ('click', startGame);
 
+debugger;
