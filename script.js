@@ -54,10 +54,11 @@ function getRandomCard(){
             }  else {
         	    playCards[i].firstElementChild.src = "images/gameover.png";
             }
+        }
 }
 // переворот карты
 function flipCard() {
-	this.classList.toggle("onclik");
+	this.classList.toggle("oncliсk");
 	const flippedCard = document.querySelectorAll('.gametable');
  	flippedCard.forEach(item =>
 		item.addEventListener("click", startGame));
