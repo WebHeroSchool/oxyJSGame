@@ -78,7 +78,7 @@ button {
 }
 
 .activ {
-  color: red;
+  
 
 }
 
@@ -95,11 +95,25 @@ button {
   
 }
 
+.cardfront{
+  background-image: url(../images/gameover.png);
+  width: 130px;
+  height: 200px;
+  background-size: cover;
+  transform: rotateY(180deg);
+  
+}
+
 .gametable{
   display: flex;
   align-content: space-between;
   flex-wrap: wrap;
   justify-content: center;
+
+}
+
+.onclick {
+  transform: rotateY(180deg);
 
 }
 
