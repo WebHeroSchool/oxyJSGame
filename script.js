@@ -64,6 +64,8 @@ function getRandomCard(){
 const flippedCard = document.querySelectorAll('.gametable');
 const selectCard = (item) => {
      item.target.classList.toggle("onclick");
+     console.log(event);
+
 }
 
 flippedCard.forEach((item) => item.addEventListener('click',selectCard));
