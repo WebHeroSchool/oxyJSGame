@@ -52,11 +52,12 @@ function createGameTable(){
 // получение случайной карты
 function getRandomCard(){
     const playCards = document.querySelectorAll('.cardfront');
-    const gameCards = getNumberOfCard;
-    let randomCard = 0;
+    const gameCards = getNumberOfCard();
+    let randomCard =  Math.floor(Math.random() * gameCards);
 
         for (let i = 0; i < gameCards; i++ ) {
-            if (i === randomCard) { playCards[i].classList.add('bug'); 
+            if (i === randomCard) {
+             	playCards[i].classList.add('bug'); 
             } 
         }
 }
