@@ -51,21 +51,19 @@ function createGameTable(){
 
 // получение случайной карты
 function getRandomCard(){
-    const playCards = document.querySelectorAll('.gametable');
+    const playCards = document.querySelectorAll('.cardfront');
     const gameCards = getNumberOfCard;
-    let randomCard = Math.floor(Math.random() * gameCards);
+    let randomCard = 0;
 
         for (let i = 0; i < gameCards; i++ ) {
-            if (i === randomCard) { playCards[i].firstElementChild.src = "images/bug.png"; 
+            if (i === randomCard) { playCards[i].classList.add('bug'); 
             } 
         }
 }
 // переворот карты
 const flippedCard = document.querySelectorAll('.gametable');
 const selectCard = (item) => {
-     item.target.classList.toggle("onclick");
-     console.log(event);
-
+     item.target.parentElement.classList.toggle("onclick");    
 }
 
 flippedCard.forEach((item) => item.addEventListener('click',selectCard));
