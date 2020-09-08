@@ -38,17 +38,16 @@ function createGameTable(){
     	    console.log(i);
     	    let card = document.createElement("div");
     	    card.classList.add('cardback');
-    	    gameTable.appendChild(card);
-    	    
-    	    console.log(card);	
+    	    gameTable.appendChild(card);	
     }
 }
+
 // получение случайной карты
 function getRandomCard(){
     const playCards = document.querySelectorAll('.gametable');
     const gameCards = getNumberOfCard;
     let randomCard = Math.floor(Math.random() * gameCards);
- 
+
         for (let i = 0; i < gameCards; i++ ) {
             if (i === randomCard) { playCards[i].firstElementChild.src = "images/bug.png"; 
             }  else {
@@ -57,19 +56,21 @@ function getRandomCard(){
         }
 }
 // переворот карты
-function flipCard() {
-	this.classList.toggle("oncliсk");
-	const flippedCard = document.querySelectorAll('.gametable');
- 	flippedCard.forEach(item =>
-		item.addEventListener("click", startGame));
+const flippedCard = document.querySelectorAll('.gametable');
+const selectCard = (item) => {
+     item.target.classList.add("onclick");
 }
 
+flippedCard.forEach((item) => item.addEventListener('click',selectCard));
+
+
+//запуск игры
 function startGame() {
     getNumberOfCard();
 	createGameTable();
     document.querySelector('.main').classList.add('hidden');
     getRandomCard();
-    flipCard();
+    
 }
 debugger;
 start.addEventListener ('click', startGame);

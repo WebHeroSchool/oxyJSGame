@@ -100,8 +100,10 @@ button {
   width: 130px;
   height: 200px;
   background-size: cover;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   transform: rotateY(180deg);
-  
+
 }
 
 .gametable{
