@@ -35,10 +35,16 @@ function createGameTable(){
     const cards = getNumberOfCard ();
        
     for (let i=0; i<cards; i++) {
-    	    console.log(i);
+    	    
     	    let card = document.createElement("div");
-    	    card.classList.add('cardback');
-    	    gameTable.appendChild(card);	
+    	    card.classList.add('cardwrap');
+    	    gameTable.appendChild(card);
+    	    let cardback = document.createElement('div');
+    	    cardback.classList.add('cardback');
+    	    card.appendChild(cardback);
+    	    let cardfront = document.createElement('div');
+    	    cardfront.classList.add('cardfront');
+    	    card.appendChild(cardfront);	
     }
 }
 
@@ -58,7 +64,7 @@ function getRandomCard(){
 // переворот карты
 const flippedCard = document.querySelectorAll('.gametable');
 const selectCard = (item) => {
-     item.target.classList.add("onclick");
+     item.target.classList.toggle("onclick");
 }
 
 flippedCard.forEach((item) => item.addEventListener('click',selectCard));
