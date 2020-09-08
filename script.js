@@ -44,7 +44,8 @@ function createGameTable(){
     	    card.appendChild(cardback);
     	    let cardfront = document.createElement('div');
     	    cardfront.classList.add('cardfront');
-    	    card.appendChild(cardfront);	
+    	    card.appendChild(cardfront);
+
     }
 }
 
@@ -56,9 +57,7 @@ function getRandomCard(){
 
         for (let i = 0; i < gameCards; i++ ) {
             if (i === randomCard) { playCards[i].firstElementChild.src = "images/bug.png"; 
-            }  else {
-        	    playCards[i].firstElementChild.src = "images/gameover.png";
-            }
+            } 
         }
 }
 // переворот карты
