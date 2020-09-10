@@ -69,7 +69,12 @@ const selectCard = (item) => {
 
 flippedCard.forEach((item) => item.addEventListener('click',selectCard));
 
-
+// подготовка к следующему запуску игры
+function goToStart(){
+	document.querySelector('.main').classList.remove('hidden');
+    gameTable.remove();
+	gameTable.innerHTML='';
+}
 //запуск игры
 function startGame() {
     getNumberOfCard();
@@ -78,5 +83,5 @@ function startGame() {
     getRandomCard();
     
 }
-debugger;
+
 start.addEventListener ('click', startGame);
