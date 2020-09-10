@@ -62,16 +62,32 @@ function getRandomCard(){
         }
 }
 // переворот карты
+
 const flippedCard = document.querySelectorAll('.gametable');
 const selectCard = (item) => {
-     item.target.parentElement.classList.toggle("onclick");    
+     item.target.parentElement.classList.add("onclick");
+     flippedCard.forEach((item) => item.addEventListener('click',goToStart))   
 }
 
-flippedCard.forEach((item) => item.addEventListener('click',selectCard));
+flippedCard.forEach((item) => item.addEventListener('click',selectCard)); 
 
+
+// перворот
+/*const flippedCard = document.querySelectorAll('.cardwrap');
+let flipCardOnClick = (item)=> {
+	item.addEventListener('click',function(){
+		flippedCard.forEach(()=>{
+		    item.target.parentElement.classList.add('onclick');
+			flippedCard.forEach((item)=> item.addEventListener('click',goToStart))
+		});
+	});
+}
+flippedCard.forEach(flipCardOnClick);
+
+*/
 // подготовка к следующему запуску игры
 function goToStart(){
-	document.querySelector('.main').classList.remove('hidden');
+    document.querySelector('.main').classList.remove('hidden');
     gameTable.remove();
 	gameTable.innerHTML='';
 }
