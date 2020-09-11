@@ -2,6 +2,7 @@ const start = document.querySelector('.start');
 const level = document.querySelectorAll('.level');
 const gameTable = document.querySelector(".gametable");
 const selectLevel = (item) => {
+	level.forEach((item)=>item.classList.remove("active"));
 	item.target.classList.add("active");
 
 };
@@ -28,12 +29,11 @@ function getNumberOfCard () {
 		    numberOfCards = 9;
 	}
     return numberOfCards;
-
 }
+
 // создание игрового стола
 function createGameTable(){
-    const cards = getNumberOfCard ();
-       
+    const cards = getNumberOfCard ();       
     for (let i=0; i<cards; i++) {
     	    
     	    let card = document.createElement("div");
@@ -45,7 +45,6 @@ function createGameTable(){
     	    let cardfront = document.createElement('div');
     	    cardfront.classList.add('cardfront');
     	    card.appendChild(cardfront);
-
     }
 }
 
@@ -71,20 +70,6 @@ const selectCard = (item) => {
 
 flippedCard.forEach((item) => item.addEventListener('click',selectCard)); 
 
-
-// перворот
-/*const flippedCard = document.querySelectorAll('.cardwrap');
-let flipCardOnClick = (item)=> {
-	item.addEventListener('click',function(){
-		flippedCard.forEach(()=>{
-		    item.target.parentElement.classList.add('onclick');
-			flippedCard.forEach((item)=> item.addEventListener('click',goToStart))
-		});
-	});
-}
-flippedCard.forEach(flipCardOnClick);
-
-*/
 // подготовка к следующему запуску игры
 function goToStart(){
     document.querySelector('.main').classList.remove('hidden');
@@ -99,5 +84,5 @@ function startGame() {
     getRandomCard();
     
 }
-
 start.addEventListener ('click', startGame);
+debugger
