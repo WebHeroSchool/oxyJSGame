@@ -45,12 +45,14 @@ function createGameTable(){
     	    let cardfront = document.createElement('div');
     	    cardfront.classList.add('cardfront');
     	    card.appendChild(cardfront);
+console.log(card);    	    
     }
 }
 
 // получение случайной карты
 function getRandomCard(){
     const playCards = document.querySelectorAll('.cardfront');
+console.log(playCards);   
     const gameCards = getNumberOfCard();
     let randomCard =  Math.floor(Math.random() * gameCards);
 
