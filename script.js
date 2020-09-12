@@ -66,15 +66,30 @@ const flippedCard = document.querySelectorAll('.gametable');
 console.log(flippedCard);
 let selectCard = (item) => {
      item.target.parentElement.classList.add("onclick");
-     console.log(event);
      flippedCard.forEach((item) => item.addEventListener('click',goToStart))   
 }
+flippedCard.forEach((item)=> item.addEventListener('click',selectCard));
+
+
+/*let flippedCard = document.querySelectorAll ('.gametable');
+console.log(flippedCard);
+let selectCard = (item) => {
+    if(item.target.classList.valu === 'cardback') {
+    	item.target.parentElement.classList.add ("onclick");
+        flippedCard.forEach((item) => item.addEventListener('click',goToStart))   
+    
+    }
+}
+flippedCard.forEach((item)=> item.addEventListener('click',selectCard));
+*/
 
 // подготовка к следующему запуску игры
 function goToStart(){
-    document.querySelector('.main').classList.remove('hidden');
+/*    document.querySelector('.main').classList.remove('hidden');
 	gameTable.innerHTML='';
 	flippedCard.forEach((item)=> item.removeEventListener('click',goToStart));
+*/
+window.location.reload();	
 }
 
 //запуск игры
