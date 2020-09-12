@@ -1,7 +1,7 @@
 const start = document.querySelector('.start');
 const level = document.querySelectorAll('.level');
 const gameTable = document.querySelector(".gametable");
-const selectLevel = (item) => {
+let selectLevel = (item) => {
 	level.forEach((item)=>item.classList.remove("active"));
 	item.target.classList.add("active");
 
@@ -16,7 +16,7 @@ function showLevel() {
 }
 //получение количества карт в зависимости от уровня игры
 function getNumberOfCard () {
-	const idActiveLevel = showLevel();
+	let idActiveLevel = showLevel();
 	let numberOfCards = 0;
 	switch(idActiveLevel){
 		case "easy":
@@ -33,7 +33,7 @@ function getNumberOfCard () {
 
 // создание игрового стола
 function createGameTable(){
-    const cards = getNumberOfCard ();       
+    let cards = getNumberOfCard ();       
     for (let i=0; i<cards; i++) {
     	    
     	    let card = document.createElement("div");
@@ -51,9 +51,9 @@ console.log(card);
 
 // получение случайной карты
 function getRandomCard(){
-    const playCards = document.querySelectorAll('.cardfront');
+    let playCards = document.querySelectorAll('.cardfront');
 console.log(playCards);   
-    const gameCards = getNumberOfCard();
+    let gameCards = getNumberOfCard();
     let randomCard =  Math.floor(Math.random() * gameCards);
         for (let i = 0; i < gameCards; i++ ) {
             if (i === randomCard) {
@@ -64,7 +64,7 @@ console.log(playCards);
 // переворот карты
 
 const flippedCard = document.querySelectorAll('.gametable');
-const selectCard = (item) => {
+let selectCard = (item) => {
      item.target.parentElement.classList.add("onclick");
      flippedCard.forEach((item) => item.addEventListener('click',goToStart))   
 }
