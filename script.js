@@ -1,5 +1,5 @@
 const start = document.querySelector('.start');
-const level = document.querySelectorAll('.level');
+const level = document.querySelectorAll('.subtitle');
 const gameTable = document.querySelector(".gametable");
 let selectLevel = (item) => {
 	level.forEach((item)=>item.classList.remove("active"));
