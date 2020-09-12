@@ -14,6 +14,7 @@ function showLevel() {
 	let idActiveLevel = activeLevel.id;
 	return idActiveLevel;
 }
+
 //получение количества карт в зависимости от уровня игры
 function getNumberOfCard () {
 	let idActiveLevel = showLevel();
@@ -44,15 +45,13 @@ function createGameTable(){
     	    card.appendChild(cardback);
     	    let cardfront = document.createElement('div');
     	    cardfront.classList.add('cardfront');
-    	    card.appendChild(cardfront);
-console.log(card);    	    
+    	    card.appendChild(cardfront);   	    
     }
 }
 
 // получение случайной карты
 function getRandomCard(){
-    let playCards = document.querySelectorAll('.cardfront');
-console.log(playCards);   
+    let playCards = document.querySelectorAll('.cardfront');  
     let gameCards = getNumberOfCard();
     let randomCard =  Math.floor(Math.random() * gameCards);
         for (let i = 0; i < gameCards; i++ ) {
@@ -61,20 +60,23 @@ console.log(playCards);
             } 
         }
 }
-// переворот карты
 
+// переворот карты
 const flippedCard = document.querySelectorAll('.gametable');
+console.log(flippedCard);
 let selectCard = (item) => {
      item.target.parentElement.classList.add("onclick");
+     console.log(event);
      flippedCard.forEach((item) => item.addEventListener('click',goToStart))   
 }
 
-flippedCard.forEach((item) => item.addEventListener('click',selectCard)); 
 // подготовка к следующему запуску игры
 function goToStart(){
     document.querySelector('.main').classList.remove('hidden');
 	gameTable.innerHTML='';
+	flippedCard.forEach((item)=> item.removeEventListener('click',goToStart));
 }
+
 //запуск игры
 function startGame() {
     getNumberOfCard();
@@ -84,4 +86,4 @@ function startGame() {
     
 }
 start.addEventListener ('click', startGame);
-debugger
+
