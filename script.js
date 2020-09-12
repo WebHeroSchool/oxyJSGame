@@ -55,7 +55,6 @@ function getRandomCard(){
 console.log(playCards);   
     const gameCards = getNumberOfCard();
     let randomCard =  Math.floor(Math.random() * gameCards);
-
         for (let i = 0; i < gameCards; i++ ) {
             if (i === randomCard) {
              	playCards[i].classList.add('bug'); 
@@ -71,11 +70,9 @@ const selectCard = (item) => {
 }
 
 flippedCard.forEach((item) => item.addEventListener('click',selectCard)); 
-
 // подготовка к следующему запуску игры
 function goToStart(){
     document.querySelector('.main').classList.remove('hidden');
-    gameTable.remove();
 	gameTable.innerHTML='';
 }
 //запуск игры

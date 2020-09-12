@@ -49,12 +49,6 @@ button {
 
 }
 
-.restangle {
-  width: 18px;
-  height: 18px;
-  padding-right: 30px;
-
-}
  .push {
   padding-left: 103px;
   padding-top: 85px;
@@ -77,8 +71,16 @@ button {
 
 }
 
-.activ {
-  
+.active::before {
+  position: absolute;
+  content: '';
+  background: url('../images/Rectangle.png') no-repeat;
+  background-size: cover;
+  border: none;
+  width: 22px;
+  height: 22px;
+  top: 20px;
+  left: 0;
 
 }
 
@@ -106,6 +108,12 @@ button {
   -webkit-backface-visibility: hidden;
 
 }
+
+.cardback:hover{
+  transform: rotate(-3.08deg) translateY(-20px);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+
+} 
 
 .cardfront{
   position: absolute;
