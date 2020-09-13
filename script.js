@@ -62,7 +62,7 @@ function getRandomCard(){
 }
 
 // переворот карты
-const flippedCard = document.querySelectorAll('.gametable');
+/*const flippedCard = document.querySelectorAll('.gametable');
 console.log(flippedCard);
 let selectCard = (item) => {
      item.target.parentElement.classList.add("onclick");
@@ -70,26 +70,31 @@ let selectCard = (item) => {
 }
 flippedCard.forEach((item)=> item.addEventListener('click',selectCard));
 
-
-/*let flippedCard = document.querySelectorAll ('.gametable');
-console.log(flippedCard);
-let selectCard = (item) => {
-    if(item.target.classList.valu === 'cardback') {
-    	item.target.parentElement.classList.add ("onclick");
-        flippedCard.forEach((item) => item.addEventListener('click',goToStart))   
-    
-    }
+// подготовка к следующему запуску игры
+function goToStart(){
+    window.location.reload();	
 }
-flippedCard.forEach((item)=> item.addEventListener('click',selectCard));
 */
+
+//ДРУГОЙ ВАРИАНТ
+// переворот карты
+
+const flippedCard = document.querySelectorAll('.gametable');
+let selectCard = (item) => {
+
+    if (item.target.classList.value === 'cardback') {
+     item.target.parentElement.classList.add("onclick");
+     flippedCard.forEach((item) => item.addEventListener('click',goToStart))
+    }  
+}
+
+flippedCard.forEach((item) => item.addEventListener('click',selectCard)); 
 
 // подготовка к следующему запуску игры
 function goToStart(){
-/*    document.querySelector('.main').classList.remove('hidden');
+    document.querySelector('.main').classList.remove('hidden');
 	gameTable.innerHTML='';
-	flippedCard.forEach((item)=> item.removeEventListener('click',goToStart));
-*/
-window.location.reload();	
+        flippedCard.forEach((item) => item.removeEventListener('click',goToStart))
 }
 
 //запуск игры
