@@ -1,10 +1,9 @@
-const start = document.querySelector('.start');
-const level = document.querySelectorAll('.subtitle');
+const start = document.querySelector('.main__start');
+const level = document.querySelectorAll('.main__subtitle');
 const gameTable = document.querySelector(".gametable");
 let selectLevel = (item) => {
 	level.forEach((item)=>item.classList.remove("active"));
 	item.target.classList.add("active");
-
 };
 
 level.forEach((item) => item.addEventListener('click',selectLevel ));
@@ -20,14 +19,14 @@ function getNumberOfCard () {
 	let idActiveLevel = showLevel();
 	let numberOfCards = 0;
 	switch(idActiveLevel){
-		case "easy":
-		    numberOfCards = 3;
-		break;
 		case "medium":
 		    numberOfCards = 6;
 		break;
-		default:
+		case "hard":
 		    numberOfCards = 9;
+		break;
+		default:
+		    numberOfCards = 3;
 	}
     return numberOfCards;
 }
@@ -36,7 +35,6 @@ function getNumberOfCard () {
 function createGameTable(){
     let cards = getNumberOfCard ();       
     for (let i=0; i<cards; i++) {
-    	    
     	    let card = document.createElement("div");
     	    card.classList.add('cardwrap');
     	    gameTable.appendChild(card);
@@ -81,10 +79,9 @@ function goToStart(){
 
 const flippedCard = document.querySelectorAll('.gametable');
 let selectCard = (item) => {
-
     if (item.target.classList.value === 'cardback') {
-     item.target.parentElement.classList.add("onclick");
-     flippedCard.forEach((item) => item.addEventListener('click',goToStart))
+        item.target.parentElement.classList.add("onclick");
+        flippedCard.forEach((item) => item.addEventListener('click',goToStart))
     }  
 }
 
@@ -94,7 +91,7 @@ flippedCard.forEach((item) => item.addEventListener('click',selectCard));
 function goToStart(){
     document.querySelector('.main').classList.remove('hidden');
 	gameTable.innerHTML='';
-        flippedCard.forEach((item) => item.removeEventListener('click',goToStart))
+    flippedCard.forEach((item) => item.removeEventListener('click',goToStart))
 }
 
 //запуск игры
@@ -102,8 +99,8 @@ function startGame() {
     getNumberOfCard();
 	createGameTable();
     document.querySelector('.main').classList.add('hidden');
-    getRandomCard();
-    
+    getRandomCard();    
 }
+
 start.addEventListener ('click', startGame);
 
