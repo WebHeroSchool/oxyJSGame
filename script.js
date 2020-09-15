@@ -21,9 +21,11 @@ function getNumberOfCard () {
 	switch(idActiveLevel){
 		case "medium":
 		    numberOfCards = 6;
+		    gameTable.classList.add('gametable__six');
 		break;
 		case "hard":
-		    numberOfCards = 9;
+		    numberOfCards = 10;
+
 		break;
 		default:
 		    numberOfCards = 3;
@@ -43,7 +45,7 @@ function createGameTable(){
     	    card.appendChild(cardback);
     	    let cardfront = document.createElement('div');
     	    cardfront.classList.add('cardfront');
-    	    card.appendChild(cardfront);   	    
+    	    card.appendChild(cardfront);
     }
 }
 
@@ -91,6 +93,7 @@ flippedCard.forEach((item) => item.addEventListener('click',selectCard));
 function goToStart(){
     document.querySelector('.main').classList.remove('hidden');
 	gameTable.innerHTML='';
+	gameTable.classList.remove('gametable__six');
     flippedCard.forEach((item) => item.removeEventListener('click',goToStart))
 }
 
