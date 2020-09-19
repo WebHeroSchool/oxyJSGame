@@ -1,4 +1,5 @@
 body {
+  margin: 0;
   max-width: 1440px;
   max-height: 1024px;
   width: 100%;
@@ -7,7 +8,7 @@ body {
   font-family: RobotoBold;
   color: #FFF;
   display: flex;
-
+  
 }
  
 h1,h2,p {
@@ -17,7 +18,7 @@ h1,h2,p {
 
 h1 {
   font-size: 57px;
-  padding-top: 129px;
+  padding-top: 120px;
   padding-left: 103px;
 }
 
@@ -66,8 +67,8 @@ button {
  .wrapcard__first {
   position: absolute;
   transform: rotate(11.9deg);
-  right: 27%;
-  top: 46%;
+  right: 22%;
+  top: 60%;
   
 }
 
@@ -77,8 +78,8 @@ button {
 .wrapcard__second {
   position: absolute;
   transform: rotate(39.26deg);
-  right: 15%;
-  top: 48%;
+  right: 10%;
+  top: 62%;
 
 }
 
@@ -109,7 +110,7 @@ button {
   align-items: center;
   margin-right: 24px;
   margin-bottom: 24px;
-  width:220px ;
+  width:218px ;
   height:340px ;
   transform-style: preserve-3d;
   transition: transform .5s;
@@ -155,10 +156,18 @@ button {
   justify-content: center;
   
 }
+.gametable__three {
+
+}
 
 .gametable__six {
   width: 850px;
 }
+
+.gametable__ten {
+ 
+}
+
 .onclick {
   transform: rotateY(180deg);
 
@@ -168,23 +177,85 @@ button {
   background-image: url(../images/bug.png);
 }
 
-@media (max-width: 1050px){
+@media (max-width: 1300px){
+
+  .gametable__six {
+    width: 600px;
+
+  }
+
+  .gametable__ten {
+    width: 1020px;
+
+    }
+
+  .cardwrap{
+    width: 175px;
+    height: 272px;
+
+  }
+
+}
+
+@media (max-width: 1020px){
+
   .main__wrapcard {
     display: none;
 
   }
+
   h1,p {
     padding-left: 45px;
 
   }
-}
-@media (max-width: 950px ) {
-  
 
+  .gametable__six {
+    width: 530px;
+    
+  }
+
+  .gametable__ten {
+    width: 700px;
+  }
+
+  .cardwrap {
+    width: 109px;
+    height: 170px;
+
+  }
+}
+
+@media (max-width: 700px ) {
+   
+   .gametable__six {
+    width: 300px;
+    
+  }
+
+  .gametable__ten {
+   width: 450px;
+
+  }
+  .cardwrap {
+    width: 65px;
+    height: 102px;
+  
   }
 
 }
 
-@media (max-width: ) {
+@media (max-width: 450px ) {
 
+  .gametable__six{
+    width: 200px;
+
+  }
+  .gametable__ten {
+   width: 300px;
+  }
+  .cardwrap {
+    width: 33px;
+    height: 51px;
+    
+  }
 } 

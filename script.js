@@ -25,10 +25,11 @@ function getNumberOfCard () {
 		break;
 		case "hard":
 		    numberOfCards = 10;
-
+            gameTable.classList.add('gametable__ten');
 		break;
 		default:
 		    numberOfCards = 3;
+		    gameTable.classList.add('gametable__three');
 	}
     return numberOfCards;
 }
@@ -93,7 +94,7 @@ flippedCard.forEach((item) => item.addEventListener('click',selectCard));
 function goToStart(){
     document.querySelector('.main').classList.remove('hidden');
 	gameTable.innerHTML='';
-	gameTable.classList.remove('gametable__six');
+	gameTable.classList.remove('gametable__six','gametable__ten','gametable__three');
     flippedCard.forEach((item) => item.removeEventListener('click',goToStart))
 }
 
