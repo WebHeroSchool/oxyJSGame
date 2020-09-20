@@ -20,6 +20,7 @@ h1 {
   font-size: 57px;
   padding-top: 120px;
   padding-left: 103px;
+
 }
 
 p {
@@ -33,16 +34,20 @@ h2 {
   position: relative;
   font-size: 50px;
   padding-left: 45px;
+
 }
 
 h2:hover{
   color: #81F7D8;
+
 }
 
 .main__start{
   padding-top: 80px;
   padding-left: 100px;
+
 }
+
 button {
   font-size: 32px;
   background: #D62B2E;
@@ -53,6 +58,7 @@ button {
   position: absolute;
   color: #FFF;
   cursor: pointer;
+
 }
 
 .main__level {
@@ -72,19 +78,11 @@ button {
   
 }
 
-.wrapcard__first:hover {
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.7);
-}
 .wrapcard__second {
   position: absolute;
   transform: rotate(39.26deg);
   right: 10%;
   top: 62%;
-
-}
-
-.wrapcard__second:hover{
-  box-shadow: -2px 0px 1px rgba(0,0,0.3);
 
 }
 
@@ -99,12 +97,14 @@ button {
   top: 20px;
   left: 0;
   margin-right: 10px;
+
 }
 
 .hidden {
   display: none;
 
 }
+
 .cardwrap{
   justify-content: space-between;
   align-items: center;
@@ -115,7 +115,9 @@ button {
   transform-style: preserve-3d;
   transition: transform .5s;
   position: relative;
+
 }
+
 .cardback{
   position: absolute;
   background-image: url(../images/cardback.png);
@@ -156,16 +158,10 @@ button {
   justify-content: center;
   
 }
-.gametable__three {
-
-}
 
 .gametable__six {
   width: 850px;
-}
 
-.gametable__ten {
- 
 }
 
 .onclick {
@@ -175,6 +171,7 @@ button {
 
 .bug {
   background-image: url(../images/bug.png);
+
 }
 
 @media (max-width: 1300px){
@@ -187,7 +184,7 @@ button {
   .gametable__ten {
     width: 1020px;
 
-    }
+  }
 
   .cardwrap{
     width: 175px;
@@ -209,6 +206,12 @@ button {
 
   }
 
+  .main__start{
+    padding-top: 0;
+    padding-left: 10px;
+
+  }
+
   .gametable__six {
     width: 530px;
     
@@ -216,6 +219,7 @@ button {
 
   .gametable__ten {
     width: 700px;
+
   }
 
   .cardwrap {
@@ -223,9 +227,15 @@ button {
     height: 170px;
 
   }
+  
 }
 
 @media (max-width: 700px ) {
+
+  h1 {
+    padding-top: 0;
+
+  }
    
    .gametable__six {
     width: 300px;
@@ -246,16 +256,36 @@ button {
 
 @media (max-width: 450px ) {
 
-  .gametable__six{
+  h2 {
+    padding-left: 5px;
+
+  }
+  
+  p {
+    padding-bottom: 0;
+
+  }
+
+  .active::before {
+    left: -35px;
+
+  }
+
+  .gametable__six {
     width: 200px;
 
   }
+
   .gametable__ten {
    width: 300px;
+
   }
+
   .cardwrap {
     width: 33px;
     height: 51px;
     
   }
+
 } 
+
