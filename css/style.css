@@ -153,7 +153,8 @@ button:hover {
 
 }
 
-.gametable{
+.gametable {
+  height: 100vh;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -164,6 +165,11 @@ button:hover {
 
 .gametable__six {
   width: 850px;
+
+}
+
+.gametable__ten {
+  width: 1400px;
 
 }
 
@@ -248,7 +254,7 @@ button:hover {
    width: 450px;
 
   }
-  
+
   .cardwrap {
     width: 65px;
     height: 102px;
