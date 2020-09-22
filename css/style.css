@@ -37,12 +37,12 @@ h2 {
 
 }
 
-h2:hover{
+h2:hover {
   color: #81F7D8;
 
 }
 
-.main__start{
+.main__start {
   padding-top: 80px;
   padding-left: 100px;
 
@@ -227,7 +227,7 @@ button {
     height: 170px;
 
   }
-  
+
 }
 
 @media (max-width: 700px ) {
@@ -270,7 +270,18 @@ button {
     left: -35px;
 
   }
+   
+  .main__start {
+    padding-left: 45px;
 
+  }
+
+  button {
+    width: 270px;
+    height: 75px;
+
+  }
+  
   .gametable__six {
     width: 200px;
 
