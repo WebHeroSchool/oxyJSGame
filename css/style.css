@@ -1,9 +1,7 @@
 body {
   margin: 0;
-  max-width: 1440px;
-  max-height: 1024px;
-  width: 100%;
-  height: 100vh;
+  max-width: 1745px;
+  max-height: 1164px;
   background: url(../images/Background.png);
   font-family: RobotoBold;
   color: #FFF;
@@ -18,15 +16,15 @@ h1,h2,p {
 
 h1 {
   font-size: 57px;
-  padding-top: 120px;
-  padding-left: 103px;
+  padding-top: 184px;
+  padding-left: 133px;
 
 }
 
 p {
   font-size: 19px;
-  padding-left: 103px;
-  padding-bottom: 63px;
+  padding-left: 136px;
+  padding-bottom: 65px;
 
 }
 
@@ -43,8 +41,8 @@ h2:hover {
 }
 
 .main__start {
-  padding-top: 80px;
-  padding-left: 100px;
+  padding-top: 90px;
+  padding-left: 131px;
 
 }
 
@@ -60,12 +58,17 @@ button {
   cursor: pointer;
 
 }
+ 
+button:hover {
+  color: #B40431;
+
+}
 
 .main__level {
   display: flex;
   align-items: center;
-  padding-left: 103px;
-  padding-bottom: 25px;
+  padding-left: 139px;
+  padding-bottom: 23px;
   cursor: pointer;
 
 }
@@ -73,16 +76,16 @@ button {
  .wrapcard__first {
   position: absolute;
   transform: rotate(11.9deg);
-  right: 22%;
-  top: 60%;
+  right: 35%;
+  top: 50%;
   
 }
 
 .wrapcard__second {
   position: absolute;
   transform: rotate(39.26deg);
-  right: 10%;
-  top: 62%;
+  right: 24%;
+  top: 52%;
 
 }
 
@@ -194,7 +197,7 @@ button {
 
 }
 
-@media (max-width: 1020px){
+@media (max-width: 1150px){
 
   .main__wrapcard {
     display: none;
@@ -203,12 +206,6 @@ button {
 
   h1,p {
     padding-left: 45px;
-
-  }
-
-  .main__start{
-    padding-top: 0;
-    padding-left: 10px;
 
   }
 
@@ -237,6 +234,11 @@ button {
 
   }
    
+  .main__start{
+    padding-top: 0;
+    
+  }
+
    .gametable__six {
     width: 300px;
     
@@ -246,6 +248,7 @@ button {
    width: 450px;
 
   }
+  
   .cardwrap {
     width: 65px;
     height: 102px;
@@ -281,7 +284,7 @@ button {
     height: 75px;
 
   }
-  
+
   .gametable__six {
     width: 200px;
 
